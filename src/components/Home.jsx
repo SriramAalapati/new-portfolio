@@ -1,244 +1,196 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import photo from '../assets/hero.png'
-import '../styles/home.css';
-import resume from '../assets/sriram_aalapati_web_and_python_developer.pdf'
+import photo from "../assets/hero.png";
+import resume from "../assets/sriram_aalapati_web_and_python_developer.pdf";
+import "../styles/home.css";
+import { useEffect } from "react";
+
 function Home() {
-    return (
-        <>
-            <div className="section-container flex flex-col md:flex-row  lg:border-2  scroll-mt-12  min-h-[calc(100vh-3rem)]  dark:border-white gap-1 md:gap-3 lg:gap-0" id="home">
-                <HeroImage />
+  // In a real application, fonts are usually loaded in index.html.
+  // We keep this here to ensure the Poppins/Inter fonts are available in this isolated environment.
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+    return () => document.head.removeChild(link);
+  }, []);
 
-                <HeroText />
-            </div>
-        </>
-    )
+  return (
+    <section
+      id="home"
+      className="relative section-container flex flex-col md:flex-row items-center justify-center min-h-[calc(100vh-80px)] px-6 md:px-16 lg:px-24 py-24 gap-1 overflow-hidden  mt-0 md:mt-20 scroll-mt-20"
+    >
+      {/* Enhanced backdrop glow for visual depth */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-gray-50/70 to-transparent dark:via-indigo-950/40 blur-3xl"></div>
+      <HeroImage />
+      <HeroText />
+    </section>
+  );
 }
-export default Home
+export default Home;
 
-const HeroImage = () => {
-    return (
-        <>
-            <motion.div className=" relative self-center   flex  justify-center items-center w-1/2 md:w-5xl lg:w-lg   ">
-                <img src={photo} onContextMenu={e => e.preventDefault()} draggable='false' loading="lazy" className="image select-none  lg:blur-xs hover:blur-none  h-fit aspect-square lg:min-h-72 lg:max-h-82 object-top object-cover rounded-full md:rounded-4xl ring-2 mt-1 shadow-md shadow-indigo-700 dark:shadow-md dark:shadow-white" alt="Sriram Aalapati" />
-                {/* <img src={gif} loading="lazy" className="absolute  h-full    aspect-square  rounded-full md:rounded-4xl pointer-events-none mix-blend-color-burn" ></img> */}
-            </motion.div>
+// --- Waving Hand Component for a lively greeting ---
+const WavingHand = () => (
+    <motion.span
+        className="inline-block origin-[70%_70%] text-5xl md:text-6xl lg:text-7xl mr-2"
+        initial={{ rotate: 0 }}
+        animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
+        transition={{ duration: 2, delay: 0.5, repeat: Infinity, repeatType: "loop", ease: "easeInOut", repeatDelay: 5 }}
+    >
+        👋
+    </motion.span>
+);
 
-        </>
-    )
-}
-const HeroText = () => {
-    return <>
-        <div className="flex flex-col  justify-center items-center lg:w-4xl">
-            <GreetingText />
-            <IntroduceText />
-            <MainText />
-            <div className="flex flex-row mt-2 gap-1 justify-center flex-wrap">
-                <AnchorButton text='View Skills' href='#skills' />
-                <AnchorButton text='view my Resume' href={resume} />
-            </div>
-        </div>
-    </>
-}
+// --- HeroImage Component ---
+const HeroImage = () => (
+  <motion.div
+    className="relative flex justify-center items-center w-full md:w-1/2 cursor-pointer" // Added cursor hint
+    initial={{ opacity: 0, y: 40, scale: 0.9 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    transition={{ duration: 1.1, ease: [0.25, 0.1, 0.25, 1] }}
+  >
+    <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 via-cyan-400/10 to-transparent blur-3xl opacity-60 -z-10 rounded-3xl"></div>
+    <img
+      src={photo}
+      alt="Sriram Aalapati - Full Stack and AI Developer"
+      draggable="false"
+      loading="eager"
+      width={460}
+      height={460}
+      onContextMenu={(e) => e.preventDefault()}
+      className="rounded-[2.5rem] object-cover object-top-right aspect-square w-full sm:w-[360px] md:w-[420px] lg:w-[460px] shadow-2xl shadow-blue-500/30 dark:shadow-cyan-900/50 transition-all duration-500 hover:scale-[1.03] select-none ring-2 ring-blue-300/40 dark:ring-indigo-400/30"
+    />
+  </motion.div>
+);
+
+// --- HeroText Component (Container) ---
+const HeroText = () => (
+  <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left w-full md:w-1/2 gap-6 md:gap-7">
+    <GreetingText />
+    <IntroduceText />
+    <MainText />
+    <motion.div
+      className="flex flex-wrap justify-center md:justify-start mt-2 gap-6"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1.2, duration: 0.6 }}
+    >
+      <AnchorButton text="View Skills" href="#skills" primary />
+      <AnchorButton text="Download Resume" href={resume} />
+    </motion.div>
+  </div>
+);
+
+// --- GreetingText Component (Increased Size and Added Waving Hand) ---
 const GreetingText = () => {
-    const parentVariants = {
-        initial: { opacity: 0.3 },
-        animate: {
-            opacity: 1,
-            transition: {
-                delay: 0,//11.5
-                delayChildren: 0,//12
-                staggerChildren: 0.15
-            }
-        }
-    };
-    const childVariant = {
-        initial: {
-            y: 0,
-            x:0,
-            opacity: 0.3
-        },
-        animate: {
-            y: 0,
-            x:0,
-            opacity: 1
-        }
-    }
-    const splitedText = 'Greetings'.split('');
-    const tags = splitedText.map((char, i) => {
-        return (<motion.span variants={childVariant} key={i} className="inline-block">{char}</motion.span>)
-    })
-    const GreetingMaskedTest = () => {
-        return <p className="!bg-indigo-500 px-5 cursor-default  dark:!bg-[#ec4e39]  dark:!text-black">Namastey!</p>
+  const parent = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1, transition: { staggerChildren: 0.06, delayChildren: 0.25 } },
+  };
+  const child = { initial: { opacity: 0, y: 15 }, animate: { opacity: 1, y: 0 } };
+  const text = ["Hi,", "I'm", "Sriram"];
 
-    }
+  return (
+    <motion.h1
+      variants={parent}
+      initial="initial"
+      animate="animate"
+      // Font size increased for stronger impact
+      className="font-[Poppins] font-bold tracking-tight leading-[1.05] text-5xl md:text-6xl lg:text-7xl flex items-center"
+    >
+        {/* <WavingHand />  */}
+      {text.map((word, i) => (
+        <motion.span
+          key={i}
+          variants={child}
+          className={`inline-block mr-3 ${
+            i === 2
+              ? "text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-teal-400 to-cyan-400 dark:from-indigo-400 dark:via-sky-300 dark:to-cyan-200"
+              : "text-gray-900 dark:text-gray-100"
+          }`}
+        >
+          {word}
+        </motion.span>
+      ))}
+      <motion.span variants={child} className="text-indigo-500 dark:text-cyan-400">
+        !
+      </motion.span>
+    </motion.h1>
+  );
+};
 
-    return (
-        <>
-            <div className=" flex justify-start  relative min-h-fit font-serif leading-14 lg:leading-20 font-medium text-5xl lg:text-7xl   ">
-                <MaskedText child={<GreetingMaskedTest />} maskSize={150} />
-                <motion.p id="greetingtext"
-                    variants={parentVariants}
-                    initial='initial'
-                    animate='animate'
-                    className="">{...tags}<motion.span variants={childVariant} className="font-bold text-6xl text-indigo-600 dark:text-white lg:text-7xl">!</motion.span>
-                </motion.p>
-            </div>
-        </>
-    )
-}
-
-
-
+// --- IntroduceText Component (Font weight font-medium/font-semibold maintained) ---
 const IntroduceText = () => {
-    const parentVariants = {
-        initial: { opacity: 0.3 },
-        animate: {
-            opacity: 1,
-            transition: {
-                delay: 0,//2
-                delayChildren: 1.35,//13.5
-                staggerChildren: 0.5
-            }
-        }
-    };
-    const childVariant = {
-        initial: {
-            y: 0,
-            opacity: 0.3
-        },
-        animate: {
-            y: 0,
-            opacity: 1
-        }
-    }
-    const IntroMaskedText = () => {
-        return <p className="!bg-indigo-600 text-xl px-5 cursor-default  dark:!bg-[#ec4e39]  dark:!text-black text-white">Yeah, I made this</p>
-    }
-    return <motion.div className="text-lg leading-10 lg:leading-12  relative flex justify-center items-center     min-h-fit">
-        <MaskedText child={<IntroMaskedText />} maskSize={100} />
-        <motion.p
-            variants={parentVariants}
-            initial='initial'
-            animate='animate'
-            className="">
-            <motion.span variants={childVariant}>Discover </motion.span>
-            <motion.span variants={childVariant} className=" text-indigo-600 font-bold dark:text-white">the person behind </motion.span>
-            <motion.span variants={childVariant}>this </motion.span>
-        </motion.p>
-    </motion.div>
+  const parent = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.4 } },
+  };
+  const child = { initial: { opacity: 0, y: 10 }, animate: { opacity: 1, y: 0 } };
 
-}
+  return (
+    <motion.p
+      variants={parent}
+      initial="initial"
+      animate="animate"
+      className="font-[Inter] text-xl md:text-2xl lg:text-3xl font-medium leading-snug tracking-tight text-gray-800 dark:text-gray-200 max-w-2xl"
+    >
+      <motion.span variants={child}>Building </motion.span>
+      <motion.span variants={child} className="text-blue-600 dark:text-cyan-300 font-semibold">
+        scalable, aesthetic
+      </motion.span>
+      <motion.span variants={child}> digital interfaces as a </motion.span>
+      <motion.span variants={child} className="text-indigo-600 dark:text-indigo-300 font-semibold">
+        Full-Stack Developer
+      </motion.span>
+      <motion.span variants={child}> & </motion.span>
+      <motion.span variants={child} className="text-indigo-600 dark:text-indigo-300 font-semibold">
+        AI Engineer.
+      </motion.span>
+    </motion.p>
+  );
+};
 
+// --- MainText Component (Font weight font-normal maintained) ---
 const MainText = () => {
-    const parentVariants = {
-        initial: {
-            opacity: 0.3,
-        },
-        animate: {
-            opacity: 1,
-            transition: {
-                duration: 4,
-                delay: 3,
-                delayChildren: 2,
-                staggerChildren: 0.35
-            }
-        }
-    };
-    const childVariant = {
-        initial: {
-            y: 0,
-            opacity: 0.3,
+  const parent = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.9, delay: 0.7 } },
+  };
+  const content =
+    "With over six months of hands-on experience, I specialize in crafting responsive and interactive web experiences using React, JavaScript, and modern frameworks. My focus is delivering visually refined, high-performance interfaces with precision in every detail.";
 
-        },
-        animate: {
-            y: 0,
-            opacity: 1
-        }
-    }
-    const mask = "On a mission to figure out myself. It’s not just about getting a job or ticking boxes—it’s about finding what actually makes me happy. Still trying to understand what my soul likes (besides good food and sleep). Just navigating this whole ‘being good human’ thing every day. Learning, growing, and laughing at my own confusion. Who knew self-discovery could be this complicated?"
-    const MainMaskedText = () => {
-        return <p className="lg:text-2xl lg:leading-10 !bg-indigo-500 dark:!bg-[#ec4e39]  dark:!text-black select-none">{mask}</p>
-    }
-    return <motion.div className="lg:text-2xl relative flex font-medium md:text-md text-md">
-        <MaskedText child={<MainMaskedText />} maskSize={200} />
-        <motion.p variants={parentVariants} initial='initial' animate='animate' className="lg:text-2xl  lg:leading-10">
-            <motion.span variants={childVariant} className="">Currently pursuing a </motion.span>
-            <motion.span variants={childVariant} className="  text-indigo-600 dark:text-white font-bold">B.Tech in Data Science</motion.span>
-            <motion.span variants={childVariant} className="">, driven by a curiosity for the stories data holds. There’s a </motion.span>
-            <motion.span variants={childVariant} className="   text-indigo-600 dark:text-white font-bold">genuine passion </motion.span>
-            <motion.span variants={childVariant} className="">for uncovering how data shapes decisions and using that insight </motion.span>
-            <motion.span variants={childVariant} className=" text-indigo-600 dark:text-white font-bold">to create innovative web solutions </motion.span>
-            <motion.span variants={childVariant} className="">that solve real-world problems. The journey is fueled by continuous learning and a commitment to growing the skills needed to make a meaningful impact in the tech world.</motion.span>
-        </motion.p>
-    </motion.div>
-}
+  return (
+    <motion.p
+      variants={parent}
+      initial="initial"
+      animate="animate"
+      className="font-[Inter] lg:text-xl md:text-lg font-normal leading-relaxed text-gray-700 dark:text-gray-400 max-w-2xl"
+    >
+      {content}
+    </motion.p>
+  );
+};
 
-export const MaskedText = ({ child, maskSize = 100 }) => {
-    const [isHovered, setIsHovered] = useState(false);
-    const size = isHovered ? maskSize : 0;
-    const [mousePosition, setMousePosition] = useState({ x: null, y: null });
-    const updateMousePosition = (e) => {
-        setMousePosition({ x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY });
-    };
-    useEffect(() => {
-
-        if (isHovered) {
-            document.body.classList.add('bg-stone-200', 'dark:!bg-gray-900', 'text-slate-400', 'dark:!text-gray-600');
-            // document.documentElement.classList.toggle('dark')
-            document.body.style.transition = "background-color 0.5s ease"
-        }
-        else {
-            document.body.classList.remove('bg-stone-200', 'text-slate-400', 'dark:!bg-gray-900', 'dark:!text-gray-600')
-        }
-
-
-
-    }, [isHovered])
-    return (
-        <>
-            <motion.div
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                onMouseMove={updateMousePosition}
-                className="masked min-h-fit absolute "
-                animate={{
-                    WebkitMaskPosition: `${mousePosition.x - size / 2}px ${mousePosition.y - size / 2}px`,
-                    WebkitMaskSize: `${size}px`,
-                }}
-                transition={{ type: "tween", ease: "backOut", duration: 0.35 }}>
-                {child}
-            </motion.div>
-        </>
-    )
-}
-
-
-
-const AnchorButton = ({ text, href }) => {
-    const variants = {
-        initial: {
-            opacity: 0,
-            scale: 0.6
-        },
-        animate: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                duration: 0.85,
-
-
-            },
-        },
-    }
-
-    return <motion.a
-        variants={variants}
-        initial='initial'
-        animate='animate'
-        whileHover={{ scale: 0.95 }}
-        whileTap={{ scale: 0.9, transition: { duration: 0.2, type: 'spring' } }}
-        href={href} className="button text-sm lg:text-2xl p-2 h-fit mb-1 mt-2 bg-indigo-500 text-white w-fit ml-5 rounded self-center box-content  after:hidden align-super cursor-pointer hover:after:inline shadow-md shadow-indigo-700 font-bold dark:bg-slate-500 dark:outline hover:bg-indigo-600" >{text}</motion.a>
-
-}
-
+// --- AnchorButton Component (Font weight font-semibold maintained, Secondary style refined) ---
+const AnchorButton = ({ text, href, primary }) => (
+  <motion.a
+    href={href}
+    target={text.includes("Resume") ? "_blank" : undefined}
+    rel={text.includes("Resume") ? "noopener noreferrer" : undefined}
+    className={`font-[Inter] relative px-8 py-3 rounded-full font-semibold tracking-wide transition-all duration-300 text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer
+      ${
+        primary
+          ? "text-white bg-gradient-to-r from-blue-600 to-cyan-500 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 focus:ring-blue-400 dark:from-indigo-500 dark:to-cyan-400"
+          // Refined secondary style: no border, clear hover background
+          : "text-gray-700 dark:text-cyan-300 bg-transparent ring-1 ring-gray-300 dark:ring-cyan-900 hover:bg-gray-100 dark:hover:bg-cyan-900/30 focus:ring-cyan-300"
+      }`}
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ delay: 1.2 }}
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.96 }}
+  >
+    {text}
+  </motion.a>
+);

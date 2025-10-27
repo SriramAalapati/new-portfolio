@@ -1,7 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+ --color-primary: #0ea5a4; /* teal-ish primary */
+  --color-accent: #06b6d4;  /* cyan accent */
+  --color-bg: #ffffff;
+  --color-bg-dark: #0b1220;
+  --color-text: #0f172a;
+  --muted: #64748b;
+  --color-border: #e6eef4; /* used only for subtle dividers */
+  --font-primary: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+body, button, a {
+  cursor: none; /* hide system cursor everywhere */
+}
 
 html{
     scroll-behavior: smooth;
@@ -17,4 +32,12 @@ html{
     color: rgb(241, 228, 228);
     background: rgb(179, 36, 36);
     
+}
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
 }

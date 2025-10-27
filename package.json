@@ -1,7 +1,6 @@
 {
   "name": "pp",
   "homepage": "https://SriramAalapati.github.io/-/",
-
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,11 +13,15 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@devicon/react": "^0.0.3",
     "@tailwindcss/vite": "^4.1.6",
+    "devicons-react": "^1.5.0",
     "framer-motion": "^12.11.4",
     "gsap": "^3.13.0",
+    "lucide-react": "^0.546.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
     "tailwindcss": "^4.1.6"
   },
   "devDependencies": {
