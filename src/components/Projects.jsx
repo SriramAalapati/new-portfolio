@@ -13,7 +13,8 @@ import {
 } from "lucide-react";
 
 import chatbotImg from "../assets/projects/ai-healthcare-chatbot.png";
-import dairyImg from "../assets/whatsapp.png";
+import dairyImg from "../assets/projects/dairy.png";
+import crmImg from "../assets/projects/crm.png";
 
 const projects = [
   {
@@ -46,12 +47,13 @@ const projects = [
     tech: [
       "React",
       "Express.js",
-      "Sequelize",
-      "Azure SQL",
+      "Mongoose",
+      "Azure COSMODB (MongoDB)",
       "Tailwind CSS",
       "JWT Auth",
     ],
-    github: "https://github.com/SriramAalapati/dairy",
+    github: "https://github.com/SriramAalapati/diary",
+    link:"https://sriramaalapati.github.io/diary/",
     image: dairyImg,
     category: "Full-stack Application",
     keyFeatures: [
@@ -82,8 +84,9 @@ const projects = [
     "Framer Motion",
     "JWT Authentication"
   ],
-  github: "https://github.com/SriramAalapati/CRM",
-  image: dairyImg, // replace with your CRM preview image
+  github: "https://github.com/SriramAalapati/business-crm",
+  link:"https://sriramaalapati.github.io/business-crm/",
+  image: crmImg, // replace with your CRM preview image
   category: "Full-stack Application",
   keyFeatures: [
     "Lead generation and pipeline management",

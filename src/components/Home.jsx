@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import photo from "../assets/hero.png";
-import resume from "../assets/sriram_aalapati_web_and_python_developer.pdf";
+import resume from "../assets/sriram_aalapati_resume.pdf";
 import "../styles/home.css";
 import { useEffect } from "react";
 

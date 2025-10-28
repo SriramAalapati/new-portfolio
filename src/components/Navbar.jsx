@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sun, Moon, Menu, X } from "lucide-react";
-import resume from "../assets/sriram_aalapati_web_and_python_developer.pdf";
+import resume from "../assets/sriram_aalapati_resume.pdf";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import useIntersectionObserver from "./observer";
 const links = [
