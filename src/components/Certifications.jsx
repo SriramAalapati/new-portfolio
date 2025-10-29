@@ -13,7 +13,7 @@ import MTFWebDevelopment from "../assets/certificates/MTF-web-development.pdf";
 import scrum from "../assets/certificates/scrum.pdf";
 import smartInternz from "../assets/certificates/smartInternz.pdf";
 import sqlLinkedin from "../assets/certificates/sql-linkedin.pdf";
-
+import mongoDBISB from "../assets/certificates/mongodb-isb.pdf";
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -66,6 +66,18 @@ const certifications = [
     priority: 2,
     color: "#0A66C2",
     skills: ["Full-Stack Development", "Web Architecture", "Frontend", "Backend", "DevOps"]
+  },
+  {
+    title: "MongoDB",
+    recipient: "Sriram Aalapati",
+    date: "July 24, 2024",
+    issuer: "Infosys Springboard",
+    certificate: mongoDBISB,
+    description: "Completed the MongoDB course, focusing on building scalable applications using MongoDB.",
+    category: "Technical Certifications",
+    color: "#00AD64",
+    priority: 1,
+    skills: ["MongoDB", "Database Design", "Data Modeling","MongoDB Aggregation Framework","Indexing Strategies","Replication and Sharding"]
   },
   {
     title: "ALTERYX DATA ANALYTICS PROCESS AUTOMATION",

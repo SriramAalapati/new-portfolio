@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import photo from "../assets/hero.png";
-import resume from "../assets/sriram_aalapati_resume.pdf";
+import photo from "/hero.png";
+import resume from "/sriram_aalapati_resume.pdf";
 import "../styles/home.css";
 import { useEffect } from "react";
 
@@ -19,7 +19,7 @@ function Home() {
   return (
     <section
       id="home"
-      className="relative section-container flex flex-col md:flex-row items-center justify-center min-h-[calc(100vh-80px)] px-6 md:px-16 lg:px-24 py-24 gap-1 overflow-hidden  mt-0 md:mt-20 scroll-mt-20"
+      className="relative section-container flex flex-col md:flex-row items-center justify-center min-h-[calc(100vh-80px)] px-6 md:px-16 lg:px-24 py-36 gap-1 overflow-hidden scroll-mt-20"
     >
       {/* Enhanced backdrop glow for visual depth */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-gray-50/70 to-transparent dark:via-indigo-950/40 blur-3xl"></div>
