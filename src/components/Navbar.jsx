@@ -39,21 +39,30 @@ export default function Navbar() {
   };
 
   // 🧭 Smooth Scroll with dynamic header offset
-  const handleLinkClick = (id) => {
-    setActive(id);
-    setMenuOpen(false);
+ const handleLinkClick = (id) => {
+  setActive(id);
+  setMenuOpen(false);
+
+  requestAnimationFrame(() => {
     const section = document.getElementById(id);
     const header = document.querySelector("header");
+
     if (section) {
-      const headerHeight = header ? header.offsetHeight : 80;
-      const targetPosition = section.offsetTop - headerHeight;
-      
+      const headerHeight = header ? header.offsetHeight:100;
+      const isMobile = window.innerWidth < 768;
+
+      const y =
+        section.getBoundingClientRect().top +
+        window.pageYOffset -
+        headerHeight;
+
       window.scrollTo({
-        top: targetPosition,
+        top:isMobile ? y + 600 : y,
         behavior: "smooth",
       });
     }
-  };
+  });
+};
 
   const ctaIcons = [
     { Icon: FaGithub, href: "https://github.com/SriramAalapati", color: "#333" },
@@ -62,7 +71,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-[100] bg-[var(--color-bg)]/95 backdrop-blur-3xl border-b border-[var(--color-border)] dark:bg-[var(--color-bg-dark)/0.6] transition-all duration-300 shadow-sm">
+    <header className=" fixed top-0 left-0 w-full z-[100] bg-[var(--color-bg)]/95 backdrop-blur-3xl border-b border-[var(--color-border)] dark:bg-[var(--color-bg-dark)/0.6] transition-all duration-300 shadow-sm">
       <nav role="navigation" aria-label="Main navigation" className="max-w-7xl mx-auto px-6  h-[80px] flex items-center justify-between">
         {/* === Logo === */}
         <motion.div
@@ -87,7 +96,7 @@ export default function Navbar() {
               SRIRAM
             </motion.h1>
             <span className="text-[11px] md:text-sm text-muted dark:text-gray-400 font-body mt-0.5 opacity-90">
-              Full Stack and AI Developer
+              Full Stack Developer
             </span>
           </div>
         </motion.div>
@@ -211,9 +220,9 @@ export default function Navbar() {
                 whileTap={{ scale: 0.95 }}
                 href={resume}
                 target="_blank"
-                className="px-4 py-2 text-sm rounded-xl font-semibold text-white dark:text-black bg-gradient-to-r from-blue-500 to-teal-400 dark:from-indigo-400 dark:to-cyan-300 shadow-md hover:shadow-lg transition-all duration-300"
+                className="px-4 py-2 text-center text-md rounded-xl font-semibold text-white dark:text-black bg-gradient-to-r from-blue-500 to-teal-400 dark:from-indigo-400 dark:to-cyan-300 shadow-md hover:shadow-lg transition-all duration-300"
               >
-                Resume
+                View My RESUME
               </motion.a>
 
               <div className="flex justify-between items-center">

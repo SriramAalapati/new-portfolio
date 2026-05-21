@@ -10,6 +10,7 @@ import cssIcon from "../assets/skills/purple-css-logo.png";
 import tsIcon from "../assets/skills/TypeScript.png";
 
 import expressIcon from "../assets/skills/Express.png";
+import springIcon from "../assets/skills/Spring.png";
 import djangoIcon from "../assets/skills/Django.png";
 import nodeIcon from "../assets/skills/Node.js.png";
 import mongodbIcon from "../assets/skills/MongoDB.png";
@@ -37,6 +38,7 @@ import matplotlibIcon from "../assets/skills/Matplotlib.png";
 import vscodeIcon from "../assets/skills/vscode.png";
 import pycharmIcon from "../assets/skills/PyCharm.png";
 import githubIcon from "../assets/skills/github.png";
+import intellijIcon from "../assets/skills/IntelliJ.png";
 
 const skillCategories = [
   {
@@ -54,12 +56,13 @@ const skillCategories = [
     name: "Backend Development",
     tech: [
       { name: "Express", icon: expressIcon, level: 80 },
+      { name: "Spring Boot", icon: springIcon, level: 80 },
       { name: "MySQL", icon: mySQLIcon, level: 80 },
+      { name: "MongoDB", icon: mongodbIcon, level: 60 },
       { name: "Sequelize", icon: sequelizeIcon, level: 80 },
       { name: "Node.js", icon: nodeIcon, level: 80 },
       { name: "SQL", icon: sqlIcon, level: 80 },
-      { name: "Django", icon: djangoIcon, level: 50 },
-      { name: "MongoDB", icon: mongodbIcon, level: 60 },
+      // { name: "Django", icon: djangoIcon, level: 50 },
     ],
   },
   {
@@ -86,7 +89,7 @@ const skillCategories = [
     tech: [
       { name: "NumPy", icon: numpyIcon, level: 70 },
       { name: "Pandas", icon: pandasIcon, level: 60 },
-      { name: "TensorFlow", icon: tfIcon, level: 10 },
+      // { name: "TensorFlow", icon: tfIcon, level: 10 },
       { name: "Selenium", icon: seleniumIcon, level: 40 },
       { name: "Scikit-Learn", icon: scikitIcon, level: 40 },
       { name: "Matplotlib", icon: matplotlibIcon, level: 40 },
@@ -98,6 +101,7 @@ const skillCategories = [
       { name: "VS Code", icon: vscodeIcon, level: 100 },
       { name: "PyCharm", icon: pycharmIcon, level: 100 },
       { name: "Github", icon: githubIcon, level: 100 },
+      { name: "IntelliJ", icon: intellijIcon, level: 100 },
     ],
   },
 ];

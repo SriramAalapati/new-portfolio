@@ -14,6 +14,7 @@ import scrum from "../assets/certificates/scrum.pdf";
 import smartInternz from "../assets/certificates/smartInternz.pdf";
 import sqlLinkedin from "../assets/certificates/sql-linkedin.pdf";
 import mongoDBISB from "../assets/certificates/mongodb-isb.pdf";
+import ictfoundation from "../assets/certificates/ictfoundation.pdf";
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -170,7 +171,20 @@ const certifications = [
     priority: 3,
     color: "#4169E1",
     skills: ["SQL Joins", "Views", "Stored Procedures", "Triggers", "Database Design", "Query Optimization", "Data Manipulation", "Indexing"]
-  }
+  },
+  {
+    title: "Test Engineer",
+    recipient: "Sriram Aalapati",
+    date: "October 2025",
+    issuer: "Infosys Foundation ICT Academy",
+    certificate: ictfoundation,
+    // link:"https://learn.mongodb.com/c/EJxAd7iXSCuF5q2uRAAorw",
+    description: "Completed the Test Engineer certification, focusing on software testing methodologies and tools.",
+    category: "Technical Certifications",
+    color: "#00ED64",
+    priority: 1,
+    skills: ["JUnit", "PyTest","Selenium WebDriver","Test Automation Frameworks","Continuous Integration Testing"]
+  },
 ];
 
 export default function Certifications() {
