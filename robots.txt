@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sriramaalapati.azurewebsites.net/sitemap.xml
+Sitemap: https://sriramaalapati.github.io/new-portfolio/sitemap.xml

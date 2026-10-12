@@ -1,51 +1,63 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<!--  Home  -->
-<url>
-<loc>https://sriramaalapati.github.io/new-portfolio/</loc>
-<lastmod>2025-10-30</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://sriramaalapati.github.io/new-portfolio/#home</loc>
-<lastmod>2025-10-30</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1.0</priority>
-</url>
-<!--  Experience Section  -->
-<url>
-<loc>https://sriramaalapati.github.io/new-portfolio/#experience</loc>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<!--  Projects  -->
-<url>
-<loc>https://sriramaalapati.github.io/new-portfolio/#projects</loc>
-<changefreq>monthly</changefreq>
-<priority>0.9</priority>
-</url>
-<!--  Skills  -->
-<url>
-<loc>https://sriramaalapati.github.io/new-portfolio/#skills</loc>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<!--  Education  -->
-<url>
-<loc>https://sriramaalapati.github.io/new-portfolio/#education</loc>
-<changefreq>yearly</changefreq>
-<priority>0.6</priority>
-</url>
-<!--  Certifications  -->
-<url>
-<loc>https://sriramaalapati.github.io/new-portfolio/#certifications</loc>
-<changefreq>yearly</changefreq>
-<priority>0.6</priority>
-</url>
-<!--  Contact  -->
-<url>
-<loc>https://sriramaalapati.github.io/new-portfolio/#contact</loc>
-<changefreq>monthly</changefreq>
-<priority>0.9</priority>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://sriramaalapati.github.io/new-portfolio/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://sriramaalapati.github.io/new-portfolio/#home</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sriramaalapati.github.io/new-portfolio/#about</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sriramaalapati.github.io/new-portfolio/#experience</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sriramaalapati.github.io/new-portfolio/#projects</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sriramaalapati.github.io/new-portfolio/#skills</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sriramaalapati.github.io/new-portfolio/#education</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sriramaalapati.github.io/new-portfolio/#certifications</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sriramaalapati.github.io/new-portfolio/#contact</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sriramaalapati.github.io/new-portfolio/sriram_aalapati_resume.pdf</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
