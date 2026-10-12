@@ -102,7 +102,7 @@ export default function Contact() {
           Contact
         </h2>
         <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Open to full-time opportunities, backend engineering roles, and system design discussions.
+          Open to full-stack product engineering opportunities, frontend/backend collaboration, and cloud-focused product development roles.
         </p>
       </motion.div>
 

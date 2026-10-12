@@ -11,37 +11,36 @@ import dataprocessor from "../assets/projects/dataprocessor.png";
 
 const projects = [
   {
-    name: "DataProcessor - Unified Backend Data Engine",
+    name: "Unified Data Processing Engine",
     description:
-      "A production-style unified data processing engine built on top of MongoTemplate, designed to abstract multi-database operations into a single consistent API layer supporting CRUD, filtering, projections, pagination, and transactional workflows.",
+      "A production-style backend architecture for abstracting multi-source data operations behind a single, reusable API layer. The system supports CRUD, dynamic filtering, projections, pagination, and transactional workflows to reduce duplication and improve maintainability across business services.",
     tech: [
       "Spring Boot",
       "MongoTemplate",
       "Java",
       "REST APIs",
       "Transaction Management",
-      "Logging Layer",
+      "System Design",
     ],
     github: "https://github.com/SriramAalapati/dataprocessor",
     link: "",
     image: dataprocessor,
     category: "Backend System / Architecture Layer",
-    role: "Backend Engineering (Core System Design)",
+    role: "Backend Engineering & System Design",
     bg: "from-blue-900/30 via-blue-600/10 to-transparent",
     keyFeatures: [
-      "Unified CRUD abstraction across multiple data sources",
-      "Dynamic query builder (filter, projection, pagination, limit)",
-      "Transaction-safe save/update pipeline",
-      "Centralized logging and request tracing layer",
-      "Extensible connector-based DB architecture",
-      "Built on MongoTemplate with custom abstraction layer",
+      "Unified CRUD abstraction across data sources",
+      "Dynamic query builder for filtering, projection, and pagination",
+      "Transaction-safe write pipelines for operational integrity",
+      "Reusable logging and tracing layer for production observability",
+      "Extensible, connector-based design for future scale",
     ],
   },
 
   {
-    name: "Business CRM - Lead Management Platform",
+    name: "Business CRM & Lead Operations Platform",
     description:
-      "Enterprise CRM system for managing sales pipelines, lead tracking, and workflow automation with modular backend architecture and secure authentication.",
+      "An end-to-end customer relationship and lead workflow platform designed for sales teams to manage opportunities, track pipeline movement, and improve operational visibility. The product combines a responsive frontend, modular API layer, and secure access model to support everyday business workflows.",
     tech: [
       "React.js",
       "Node.js (Express)",
@@ -53,23 +52,23 @@ const projects = [
     github: "https://github.com/SriramAalapati/business-crm",
     link: "https://sriramaalapati.github.io/business-crm/",
     image: crmImg,
-    category: "Full-Stack System",
+    category: "Full-Stack Product",
     role: "Full Stack Engineering",
     bg: "from-indigo-900/20 via-indigo-500/10 to-transparent",
     keyFeatures: [
-      "Role-based authentication system",
-      "Kanban pipeline for leads",
-      "Modular REST API design",
-      "Secure JWT session handling",
-      "Analytics dashboard",
+      "Role-based access for sales and admin workflows",
+      "Kanban-style lead pipeline with status tracking",
+      "Modular REST API architecture for maintainable feature growth",
+      "Secure JWT-based authentication and route protection",
+      "Business dashboard for pipeline visibility and prioritization",
     ],
   },
 
   {
-    name: "Healthcare AI Chatbot",
+    name: "AI Healthcare Assistant",
     description:
-      "AI-powered healthcare assistant using Gemini API for conversational symptom analysis and health guidance.",
-    tech: ["React.js", "Tailwind CSS", "Gemini API"],
+      "A conversational healthcare product experience that blends a polished frontend with an AI-powered symptom analysis workflow. The app demonstrates how product UX, API orchestration, and intelligent assistance can work together in a user-friendly interface.",
+    tech: ["React.js", "Tailwind CSS", "Gemini API", "UX Design"],
     github: "https://github.com/SriramAalapati/Healthcare-chatbot",
     link: "https://sriramaalapati.github.io/Healthcare-chatbot/",
     image: chatbotImg,
@@ -77,17 +76,17 @@ const projects = [
     role: "Frontend + AI Integration",
     bg: "from-cyan-900/20 via-cyan-500/10 to-transparent",
     keyFeatures: [
-      "Natural language health interaction",
-      "AI-based symptom analysis",
-      "Responsive chat UI",
-      "Real-time API communication",
+      "AI-assisted conversational symptom analysis",
+      "Responsive chat experience built for accessibility",
+      "Fast, clean data flow between UI and external API",
+      "Product-oriented interface design for real-world usage",
     ],
   },
 
   {
     name: "Productivity & Finance Tracker",
     description:
-      "Full-stack productivity system for managing tasks, expenses, and financial tracking with authentication and cloud persistence.",
+      "A personal productivity and financial management dashboard that helps users manage tasks, monitor spending, and maintain an organized workflow. It highlights the kind of end-to-end product thinking used to build operational dashboards with secure user experiences.",
     tech: [
       "React.js",
       "Express.js",
@@ -102,11 +101,10 @@ const projects = [
     role: "Full Stack Engineering",
     bg: "from-purple-900/20 via-purple-500/10 to-transparent",
     keyFeatures: [
-      "Task management system",
-      "Expense tracking module",
-      "Auth-protected user system",
-      "Cloud-based persistence",
-      "Dashboard analytics",
+      "Task and payment tracking in a unified dashboard",
+      "Authenticated user workflows for personal productivity",
+      "Cloud-friendly data model with scalable application structure",
+      "Operational analytics for better decision-making",
     ],
   },
 ];
@@ -139,10 +137,10 @@ export default function Projects() {
         viewport={{ once: true }}
       >
         <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-gray-900 via-blue-800 to-blue-600 dark:from-white dark:via-blue-300 dark:to-blue-500 bg-clip-text text-transparent">
-          Engineering Projects
+          Full-Stack Product Work
         </h2>
-        <p className="mt-5 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Backend systems, full-stack platforms, and AI integrations built with production-level thinking.
+        <p className="mt-5 text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          I build modern web products across the stack — from product-facing interfaces and API design to backend architecture, cloud deployment, and maintainable engineering decisions.
         </p>
       </motion.div>
 

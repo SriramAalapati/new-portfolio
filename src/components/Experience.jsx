@@ -14,14 +14,14 @@ import {
 const experienceData = [
   {
     id: 1,
-    role: "Software Engineer - Backend",
+    role: "Software Engineer - Backend & Product Systems",
     company: "FinMkt",
     companyUrl: "https://www.finmkt.io/", 
     location: "Hyderabad, India",
     type: "Full-Time",
     period: "Feb 2026 - Present",
     description:
-      "Working on backend system design and unified data processing architecture using Spring Boot, MongoDB, and microservice principles.",
+      "Designing and delivering backend systems and product workflows with Spring Boot, MongoDB, and distributed service patterns, while integrating business logic across application features and APIs.",
     logo: finmktLogo,
     color: "#2563eb",
     skills: [

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 // === Import Tech Icons ===
 import reactIcon from "../assets/skills/React.png";
+import nextIcon from "../assets/skills/Next.js.png";
 import tailwindIcon from "../assets/skills/Tailwind CSS.png";
 import jsIcon from "../assets/skills/JavaScript.png";
 import htmlIcon from "../assets/skills/HTML5.png";
@@ -42,65 +43,56 @@ import intellijIcon from "../assets/skills/IntelliJ.png";
 
 const skillCategories = [
   {
-    name: "Frontend Development",
+    name: "Frontend Engineering",
     tech: [
-      { name: "React", icon: reactIcon, level: 80 },
-      { name: "Tailwind CSS", icon: tailwindIcon, level: 80 },
-      { name: "JavaScript", icon: jsIcon, level: 80 },
-      { name: "HTML5", icon: htmlIcon, level: 100 },
-      { name: "CSS", icon: cssIcon, level: 100 },
-      { name: "TypeScript", icon: tsIcon, level: 30 },
+      { name: "React", icon: reactIcon, level: 90 },
+      { name: "Next.js", icon: nextIcon, level: 80 },
+      { name: "TypeScript", icon: tsIcon, level: 85 },
+      { name: "JavaScript", icon: jsIcon, level: 85 },
+      { name: "Tailwind CSS", icon: tailwindIcon, level: 85 },
+      { name: "HTML / CSS", icon: htmlIcon, level: 90 },
     ],
   },
   {
-    name: "Backend Development",
+    name: "Backend & APIs",
     tech: [
-      { name: "Express", icon: expressIcon, level: 80 },
-      { name: "Spring Boot", icon: springIcon, level: 80 },
+      { name: "Node.js", icon: nodeIcon, level: 85 },
+      { name: "Express", icon: expressIcon, level: 85 },
+      { name: "REST APIs", icon: expressIcon, level: 85 },
+      { name: "JWT / Auth", icon: expressIcon, level: 80 },
       { name: "MySQL", icon: mySQLIcon, level: 80 },
-      { name: "MongoDB", icon: mongodbIcon, level: 60 },
-      { name: "Sequelize", icon: sequelizeIcon, level: 80 },
-      { name: "Node.js", icon: nodeIcon, level: 80 },
-      { name: "SQL", icon: sqlIcon, level: 80 },
-      // { name: "Django", icon: djangoIcon, level: 50 },
+      { name: "MongoDB", icon: mongodbIcon, level: 75 },
+      { name: "Spring Boot", icon: springIcon, level: 75 },
     ],
   },
   {
-    name: "Programming Languages",
+    name: "Cloud & Product Delivery",
     tech: [
+      { name: "Azure", icon: azureIcon, level: 70 },
+      { name: "Linux", icon: linuxIcon, level: 70 },
+      { name: "Git", icon: gitIcon, level: 75 },
+      { name: "GitHub Actions", icon: githubActionIcon, level: 65 },
+      { name: "CI / CD", icon: azureIcon, level: 65 },
+      { name: "Deployment", icon: linuxIcon, level: 65 },
+    ],
+  },
+  {
+    name: "Software Fundamentals",
+    tech: [
+      { name: "Java", icon: javaIcon, level: 75 },
       { name: "Python", icon: pythonIcon, level: 70 },
-      { name: "JavaScript", icon: jsIcon, level: 80 },
-      { name: "Java", icon: javaIcon, level: 70 },
-      { name: "C", icon: cIcon, level: 70 },
+      { name: "Data Structures", icon: javaIcon, level: 75 },
+      { name: "Algorithms", icon: cIcon, level: 70 },
+      { name: "System Design", icon: springIcon, level: 70 },
+      { name: "Clean Architecture", icon: nodeIcon, level: 70 },
     ],
   },
   {
-    name: "Cloud & DevOps",
-    tech: [
-      { name: "Azure", icon: azureIcon, level: 50 },
-      { name: "Linux", icon: linuxIcon, level: 50 },
-      { name: "Git", icon: gitIcon, level: 50 },
-      { name: "Github Actions", icon: githubActionIcon, level: 50 },
-      { name: "Powershell", icon: powershellIcon, level: 20 },
-    ],
-  },
-  {
-    name: "ML & Data Science",
-    tech: [
-      { name: "NumPy", icon: numpyIcon, level: 70 },
-      { name: "Pandas", icon: pandasIcon, level: 60 },
-      // { name: "TensorFlow", icon: tfIcon, level: 10 },
-      { name: "Selenium", icon: seleniumIcon, level: 40 },
-      { name: "Scikit-Learn", icon: scikitIcon, level: 40 },
-      { name: "Matplotlib", icon: matplotlibIcon, level: 40 },
-    ],
-  },
-  {
-    name: "IDE & Tools",
+    name: "Engineering Tools",
     tech: [
       { name: "VS Code", icon: vscodeIcon, level: 100 },
+      { name: "GitHub", icon: githubIcon, level: 100 },
       { name: "PyCharm", icon: pycharmIcon, level: 100 },
-      { name: "Github", icon: githubIcon, level: 100 },
       { name: "IntelliJ", icon: intellijIcon, level: 100 },
     ],
   },
@@ -171,10 +163,10 @@ export default function Skills() {
         {/* === Section Header === */}
         <motion.div className="text-center mb-16" variants={itemVariants}>
           <h2 className="text-4xl md:text-5xl xl:text-6xl font-extrabold bg-gradient-to-r from-gray-900 via-blue-800 to-blue-600 dark:from-white dark:via-blue-300 dark:to-blue-500 bg-clip-text text-transparent pb-2">
-            My Tech Stack
+            Core Stack & Engineering Strengths
           </h2>
-          <p className="mt-4 text-gray-600 dark:text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
-            Technologies I've been working with recently
+          <p className="mt-4 text-gray-600 dark:text-gray-300 text-lg md:text-xl max-w-3xl mx-auto">
+            Focused on TypeScript, React, Node.js, Express, cloud deployment, and product engineering workflows that translate business needs into scalable software.
           </p>
         </motion.div>
 
@@ -234,7 +226,8 @@ export default function Skills() {
                         <p className="font-medium text-gray-900 dark:text-gray-100 mb-2">
                           {tech.name}
                         </p>
-                        <div className="w-full h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+
+                        {/* <div className="w-full h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                           <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: `${tech.level}%` }}
@@ -249,7 +242,7 @@ export default function Skills() {
                         </div>
                         <p className="mt-1 text-xs text-gray-600 dark:text-gray-400">
                           {tech.level}% proficiency
-                        </p>
+                        </p> */}
                       </div>
                     </div>
                   </motion.div>

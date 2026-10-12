@@ -18,7 +18,7 @@ function Home() {
   return (
     <section
       id="home"
-      className="mt-4 md:mt-0 relative w-full h-screen flex items-center justify-center px-6 md:px-16 lg:px-24 overflow-hidden"
+      className="mt-20 md:mt-0 relative w-full h-screen flex items-center justify-center px-6 md:px-16 lg:px-24 overflow-hidden"
     >
       {/* Background Depth */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-gray-50/70 to-transparent dark:via-indigo-950/40 blur-3xl" />
@@ -59,19 +59,31 @@ const HeroText = () => (
   <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left gap-6">
     <Title />
     <Summary />
+    <div className="flex flex-wrap gap-2 text-sm font-medium text-gray-700 dark:text-gray-200">
+      {['React', 'TypeScript', 'Node.js', 'Express', 'Azure', 'Product Delivery'].map((item) => (
+        <span key={item} className="rounded-full border border-blue-200 bg-blue-50/80 px-3 py-1.5 dark:border-cyan-700 dark:bg-cyan-950/30">
+          {item}
+        </span>
+      ))}
+    </div>
     <ActionButtons />
   </div>
 );
 
 const Title = () => (
-  <motion.h1
+  <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
-    className="font-[Poppins] font-bold text-4xl sm:text-5xl md:text-6xl leading-tight"
+    className="space-y-3"
   >
-    Sriram Aalapati
-  </motion.h1>
+    <p className="text-sm sm:text-base font-semibold uppercase tracking-[0.24em] text-blue-600 dark:text-cyan-300">
+      Full Stack Engineer
+    </p>
+    <h1 className="font-[Poppins] font-bold text-4xl sm:text-5xl md:text-6xl leading-tight text-gray-900 dark:text-white">
+      Sriram Aalapati
+    </h1>
+  </motion.div>
 );
 
 const Summary = () => (
@@ -81,10 +93,7 @@ const Summary = () => (
     transition={{ delay: 0.3 }}
     className="font-[Inter] text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-xl"
   >
-    Backend-focused Full Stack Engineer building scalable systems with
-    Spring Boot, Security, MongoDB, Redis, and Microservices. Designed a
-    unified data processing engine with advanced filtering, projections,
-    pagination, transactional support, and secure JWT-based architecture.
+    I am a full-stack engineer focused on building scalable, product-oriented web applications using TypeScript, React, Next.js, Node.js, and Express. I enjoy working across the stack to design clean, maintainable systems and bring cloud-native product ideas from concept to deployment.
   </motion.p>
 );
 

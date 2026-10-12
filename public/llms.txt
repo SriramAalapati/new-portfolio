@@ -1,0 +1,31 @@
+# Sriram Aalapati
+# Full Stack Engineer Portfolio
+
+Site: https://sriramaalapati.github.io/new-portfolio/
+Resume: https://sriramaalapati.github.io/new-portfolio/sriram_aalapati_resume.pdf
+LinkedIn: https://www.linkedin.com/in/sriramaalapati/
+GitHub: https://github.com/SriramAalapati
+Email: sriramaalapati4@gmail.com
+
+Summary:
+Sriram Aalapati is a full-stack engineer focused on building scalable, product-oriented web applications using TypeScript, React, Next.js, Node.js, Express, Java, Spring Boot, and cloud-based delivery. He works across the stack on frontend experiences, APIs, database design, backend services, and deployment-ready architecture.
+
+Core stack:
+- Frontend: React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS
+- Backend: Node.js, Express, REST APIs, JWT, Spring Boot, Java
+- Data and architecture: MongoDB, MySQL, PostgreSQL, API design, system design, secure backend workflows
+- Cloud and delivery: Azure, Git, GitHub, CI/CD, deployment practices
+
+Notable work:
+- Unified Data Processing Engine built with Spring Boot and MongoDB
+- Business CRM and lead operations platform using React, Express, MySQL, and JWT
+- AI healthcare assistant experience using React and Gemini API
+- Productivity and finance dashboard with secure user workflows
+
+Portfolio sections:
+- Experience
+- Projects
+- Skills
+- Education
+- Certifications
+- Contact

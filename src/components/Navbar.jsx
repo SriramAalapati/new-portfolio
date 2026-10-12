@@ -6,6 +6,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import useIntersectionObserver from "./observer";
 const links = [
   { id: "home", label: "Home" },
+  { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
@@ -96,7 +97,7 @@ export default function Navbar() {
               SRIRAM
             </motion.h1>
             <span className="text-[11px] md:text-sm text-muted dark:text-gray-400 font-body mt-0.5 opacity-90">
-              Full Stack Developer
+              Full Stack Engineer
             </span>
           </div>
         </motion.div>
